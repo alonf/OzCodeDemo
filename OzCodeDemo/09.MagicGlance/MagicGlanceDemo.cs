@@ -26,8 +26,7 @@ namespace OzCodeDemo._09.MagicGlance
 
             int retailerGiftPrice = IsElgibileForDiscount(customer) ? GetDiscountPrice() : GetRegularPrice();
 
-            int shippingCost;
-            if (int.TryParse(GetShippingCostFromConfig(), out shippingCost))
+            if (int.TryParse(GetShippingCostFromConfig(), out var shippingCost))
             {
                 retailerGiftPrice += shippingCost;
             }
